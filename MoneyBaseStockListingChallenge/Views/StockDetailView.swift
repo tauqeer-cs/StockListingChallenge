@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct StockDetailView: View {
-    let symbol: String
+    
+    let summaryObject : MarketSummary
+    
     @StateObject private var viewModel = StockDetailViewModel()
     
     var body: some View {
@@ -18,10 +20,42 @@ struct StockDetailView: View {
                     ProgressView()
                         .scaleEffect(1.5)
                         .padding()
-                } else if let errorMessage = viewModel.errorMessage {
-                    ErrorView(message: errorMessage) {
-                        viewModel.loadStockDetail(symbol: symbol)
+                } else if let _ = viewModel.errorMessage {
+                    
+                    ///For detail view error we are showing a fallback view
+                    StockRowView(stock: summaryObject)
+                    Divider()
+                    HStack {
+                        Text("Exchange Timezone")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                        Spacer()
+                        Text(summaryObject.exchangeTimezoneName)
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
                     }
+                    Divider()
+                    HStack {
+                        Text("Exchange Timezone")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                        Spacer()
+                        Text(summaryObject.exchangeTimezoneName)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                    Divider()
+                    HStack {
+                        Text("Market State")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                        Spacer()
+                        Text(summaryObject.marketState)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                    Divider()
+                 
                 } else if let stockDetail = viewModel.stockDetail {
                     stockHeader(stockDetail)
                     Divider()
@@ -34,9 +68,9 @@ struct StockDetailView: View {
             }
             .padding()
         }
-        .navigationTitle(viewModel.stockDetail?.quoteType.shortName ?? symbol)
+        .navigationTitle(viewModel.stockDetail?.quoteType.shortName ?? summaryObject.symbol)
         .onAppear {
-            viewModel.loadStockDetail(symbol: symbol)
+            viewModel.loadStockDetail(symbol: summaryObject.symbol)
         }
     }
     
@@ -53,7 +87,7 @@ struct StockDetailView: View {
                 
                 Spacer()
                 
-                Text("Symbol: \(symbol)")
+                Text("Symbol: \(summaryObject.symbol)")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
@@ -68,7 +102,7 @@ struct StockDetailView: View {
                     .fontWeight(.bold)
                 
                 if let change = stockDetail.price?.regularMarketChange?.raw,
-                   let percent = stockDetail.price?.regularMarketChangePercent?.raw {
+                   let _ = stockDetail.price?.regularMarketChangePercent?.raw {
                     HStack(spacing: 4) {
                         Image(systemName: change >= 0 ? "arrow.up" : "arrow.down")
                         Text("\(stockDetail.price?.regularMarketChange?.fmt ?? "-") (\(stockDetail.price?.regularMarketChangePercent?.fmt ?? "-"))")

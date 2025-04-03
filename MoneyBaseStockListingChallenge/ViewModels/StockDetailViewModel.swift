@@ -20,8 +20,8 @@ class StockDetailViewModel: ObservableObject {
     
     init(stockRepository : StockRepository = MarketStockRepository()){
         
-        //self.stockRepository = stockRepository
-        self.stockRepository = StaticStockRepository()
+        self.stockRepository = stockRepository
+        //self.stockRepository = StaticStockRepository()
     }
     
     func loadStockDetail(symbol: String) {
@@ -34,6 +34,7 @@ class StockDetailViewModel: ObservableObject {
                 self?.isLoading = false
                 
                 if case .failure(let error) = completion {
+                    
                     self?.errorMessage = "Failed to load stock details: \(error.localizedDescription)"
                 }
             } receiveValue: { [weak self] stockDetail in

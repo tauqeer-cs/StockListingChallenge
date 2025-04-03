@@ -31,7 +31,7 @@ struct StockListingView: View {
     private var stockList: some View {
         List {
             ForEach(viewModel.filteredStocks) { stock in
-                NavigationLink(destination: StockDetailView(symbol: stock.symbol)) {
+                NavigationLink(destination: StockDetailView(summaryObject: stock)) {
                     StockRowView(stock: stock)
                 }
             }
@@ -42,40 +42,40 @@ struct StockListingView: View {
         }
     }
     
-    struct StockRowView: View {
-        let stock: MarketSummary
-        
-        var body: some View {
-            HStack {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(stock.shortName)
-                        .font(.headline)
+}
+
+struct StockRowView: View {
+    let stock: MarketSummary
+    
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading, spacing: 4) {
+                Text(stock.shortName)
+                    .font(.headline)
+                
+                Text(stock.symbol)
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+            
+            Spacer()
+            
+            VStack(alignment: .trailing, spacing: 4) {
+                Text(stock.regularMarketPrice?.fmt ?? "-")
+                    .font(.headline)
+                
+                HStack(spacing: 2) {
+                    Image(systemName: stock.priceChange >= 0 ? "arrow.up" : "arrow.down")
+                        .foregroundColor(stock.priceChange >= 0 ? .green : .red)
                     
-                    Text(stock.symbol)
+                    Text("\(String(format: "%.2f", abs(stock.priceChange))) (\(String(format: "%.2f", abs(stock.percentChange)))%)")
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
-                }
-                
-                Spacer()
-                
-                VStack(alignment: .trailing, spacing: 4) {
-                    Text(stock.regularMarketPrice?.fmt ?? "-")
-                        .font(.headline)
-                    
-                    HStack(spacing: 2) {
-                        Image(systemName: stock.priceChange >= 0 ? "arrow.up" : "arrow.down")
-                            .foregroundColor(stock.priceChange >= 0 ? .green : .red)
-                        
-                        Text("\(String(format: "%.2f", abs(stock.priceChange))) (\(String(format: "%.2f", abs(stock.percentChange)))%)")
-                            .font(.subheadline)
-                            .foregroundColor(stock.priceChange >= 0 ? .green : .red)
-                    }
+                        .foregroundColor(stock.priceChange >= 0 ? .green : .red)
                 }
             }
-            .padding(.vertical, 4)
         }
+        .padding(.vertical, 4)
     }
-    
 }
 
 #Preview {

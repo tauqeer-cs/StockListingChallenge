@@ -9,11 +9,13 @@ import Foundation
 import Combine
 
 enum APIError: Error {
+    
     case noData
     case invalidURL
     case invalidResponse
     case networkError(Error)
     case decodingError(Error)
+    
 }
 
 protocol APIClientProtocal {
@@ -33,7 +35,6 @@ class ApiClientRepository : APIClientProtocal {
         apiRequest.addValue(ApiConfig.apiHost, forHTTPHeaderField: "x-rapidapi-host")
         apiRequest.addValue(ApiConfig.apiKey, forHTTPHeaderField: "x-rapidapi-key")
         
-        let request = URLRequest(url: url)
     
          return URLSession.shared.dataTaskPublisher(for: apiRequest)
             .tryMap { data , urlResponse in
