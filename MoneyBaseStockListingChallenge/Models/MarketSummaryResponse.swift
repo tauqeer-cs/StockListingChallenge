@@ -18,12 +18,18 @@ struct MarketSummaryAndSparkResponse: Decodable {
 
 struct MarketSummary: Decodable, Identifiable {
     
-    let fullExchangeName: String
+    let exchangeTimezoneShortName: String
+    let market : String
+    let marketState : String
     let symbol: String
     let shortName: String
+    let exchangeTimezoneName : String
     var id: String { symbol }
     let regularMarketPreviousClose: ValueWrapper?
     let regularMarketPrice: ValueWrapper?
+    let language : String
+    let priceHint : Int
+    let region : String
     
     var priceChange: Double {
         guard let currentPrice = regularMarketPrice?.raw,
