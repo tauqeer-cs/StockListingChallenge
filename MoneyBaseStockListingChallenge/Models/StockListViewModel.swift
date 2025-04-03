@@ -46,6 +46,7 @@ class StockListViewModel : ObservableObject {
             filteredStocks = stocks
         } else {
             filteredStocks = stocks.filter { stock in
+                stock.shortName.lowercased().contains(searchText.lowercased()) ||
                 stock.symbol.lowercased().contains(searchText.lowercased())
             }
         }

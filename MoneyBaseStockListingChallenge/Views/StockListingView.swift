@@ -25,6 +25,7 @@ struct StockListingView: View {
                 }
             }
         }
+        .searchable(text: $viewModel.searchText , prompt: "Search")
     }
     
     private var stockList: some View {
