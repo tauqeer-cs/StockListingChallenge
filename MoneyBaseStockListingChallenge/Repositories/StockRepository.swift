@@ -27,7 +27,7 @@ class MarketStockRepository : StockRepository {
     ///According to the documentation from the https://rapidapi.com/apidojo/ap this is already depricated
     ///So this will actually always return 204 , no data
     ///So the whereever we are using it should have to check 204 and show a fallback view
-    func getStockDetails(symbol: String, region: String) -> AnyPublisher<StockDetailResponse, APIError> {
+    func getStockDetails(symbol: String = "US", region: String) -> AnyPublisher<StockDetailResponse, APIError> {
         let queryItems : [URLQueryItem] = [
             .init(name: "symbol", value: symbol),
             .init(name: "region", value: region)
