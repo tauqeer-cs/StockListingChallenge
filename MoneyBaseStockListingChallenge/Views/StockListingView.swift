@@ -31,10 +31,9 @@ struct StockListingView: View {
     private var stockList: some View {
         List {
             ForEach(viewModel.filteredStocks) { stock in
-                
-                //Add Navigation Link here later
-                StockRowView(stock: stock)
-                
+                NavigationLink(destination: StockDetailView(symbol: stock.symbol)) {
+                    StockRowView(stock: stock)
+                }
             }
         }
         .listStyle(PlainListStyle())

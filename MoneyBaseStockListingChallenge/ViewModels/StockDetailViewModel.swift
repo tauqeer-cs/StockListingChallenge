@@ -19,7 +19,9 @@ class StockDetailViewModel: ObservableObject {
     private var stockRepository : StockRepository
     
     init(stockRepository : StockRepository = MarketStockRepository()){
-        self.stockRepository = stockRepository
+        
+        //self.stockRepository = stockRepository
+        self.stockRepository = StaticStockRepository()
     }
     
     func loadStockDetail(symbol: String) {

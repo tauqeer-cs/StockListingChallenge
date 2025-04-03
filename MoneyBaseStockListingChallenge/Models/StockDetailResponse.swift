@@ -63,13 +63,11 @@ struct FinancialsChart: Codable {
 }
 
 struct QuarterlyEarning: Codable {
-    let date: String
     let actual: ValueWrapper?
     let estimate: ValueWrapper?
 }
 
 struct PeriodicFinancial: Codable {
-    let date: Int
     let revenue: ValueWrapper?
     let earnings: ValueWrapper?
 }
