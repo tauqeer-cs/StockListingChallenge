@@ -13,7 +13,6 @@ struct StockDetailResponse: Codable {
     let price: Price?
     let financialData: FinancialData?
     let earnings: Earnings?
-    
 }
 
 struct QuoteType: Codable {

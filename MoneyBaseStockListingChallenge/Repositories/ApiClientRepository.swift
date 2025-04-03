@@ -33,7 +33,7 @@ class ApiClientRepository : APIClientProtocal {
         apiRequest.addValue(ApiConfig.apiHost, forHTTPHeaderField: "x-rapidapi-host")
         apiRequest.addValue(ApiConfig.apiKey, forHTTPHeaderField: "x-rapidapi-key")
         
-        var request = URLRequest(url: url)
+        let request = URLRequest(url: url)
     
          return URLSession.shared.dataTaskPublisher(for: apiRequest)
             .tryMap { data , urlResponse in
