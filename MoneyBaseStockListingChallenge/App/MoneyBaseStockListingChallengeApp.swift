@@ -11,7 +11,7 @@ import SwiftUI
 struct MoneyBaseStockListingChallengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StockListingView()
         }
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class StockListViewModel {
+class StockListViewModel : ObservableObject {
     
     @Published var stocks : [MarketSummary] = []
     @Published var filteredStocks : [MarketSummary] = []

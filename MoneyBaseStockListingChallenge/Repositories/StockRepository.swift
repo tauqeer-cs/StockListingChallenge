@@ -39,6 +39,7 @@ struct MarketSummary: Decodable, Identifiable {
     
     let fullExchangeName: String
     let symbol: String
+    let shortName: String
     var id: String { symbol }
 }
 
