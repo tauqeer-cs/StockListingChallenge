@@ -56,6 +56,22 @@ struct StockListingView: View {
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                 }
+                
+                Spacer()
+                
+                VStack(alignment: .trailing, spacing: 4) {
+                    Text(stock.regularMarketPrice?.fmt ?? "-")
+                        .font(.headline)
+                    
+                    HStack(spacing: 2) {
+                        Image(systemName: stock.priceChange >= 0 ? "arrow.up" : "arrow.down")
+                            .foregroundColor(stock.priceChange >= 0 ? .green : .red)
+                        
+                        Text("\(String(format: "%.2f", abs(stock.priceChange))) (\(String(format: "%.2f", abs(stock.percentChange)))%)")
+                            .font(.subheadline)
+                            .foregroundColor(stock.priceChange >= 0 ? .green : .red)
+                    }
+                }
             }
             .padding(.vertical, 4)
         }
