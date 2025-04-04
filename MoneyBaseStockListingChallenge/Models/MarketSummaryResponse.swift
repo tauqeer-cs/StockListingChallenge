@@ -8,7 +8,6 @@
 
 struct MarketSummaryResponse : Decodable {
     let marketSummaryAndSparkResponse: MarketSummaryAndSparkResponse
-    
 }
 
 struct MarketSummaryAndSparkResponse: Decodable {

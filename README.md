@@ -47,6 +47,7 @@ Views
     - StockListingView: Shows a list of stocks.
     - StockDetailView: Displays details of a stock.
 
+Another Small Notes: Didnt used any cache because project needs realtime data so no point caching I think
 
 
 
