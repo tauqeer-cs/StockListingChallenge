@@ -25,6 +25,7 @@ struct StockListingView: View {
                 }
             }
         }
+        .navigationTitle("Top Stocks")
         .searchable(text: $viewModel.searchText , prompt: "Search")
     }
     

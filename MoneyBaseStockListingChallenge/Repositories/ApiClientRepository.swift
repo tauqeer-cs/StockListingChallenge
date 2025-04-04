@@ -66,3 +66,19 @@ class ApiClientRepository : APIClientProtocal {
 }
 
 
+extension APIError: Equatable {
+    public static func == (lhs: APIError, rhs: APIError) -> Bool {
+        switch (lhs, rhs) {
+        case (.noData, .noData),
+             (.invalidURL, .invalidURL),
+             (.invalidResponse, .invalidResponse):
+            return true
+        case (.networkError, .networkError),
+             (.decodingError, .decodingError):
+            return true
+        default:
+            return false
+        }
+    }
+}
+

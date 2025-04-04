@@ -18,10 +18,9 @@ class StockDetailViewModel: ObservableObject {
     
     private var stockRepository : StockRepository
     
+    //To Test the detail with with data we can also make StaticStockRepository() since
     init(stockRepository : StockRepository = MarketStockRepository()){
-        
         self.stockRepository = stockRepository
-        //self.stockRepository = StaticStockRepository()
     }
     
     func loadStockDetail(symbol: String) {

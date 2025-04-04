@@ -14,19 +14,11 @@
 			remoteGlobalIDString = 474C79002D9E47DF00CA2817;
 			remoteInfo = MoneyBaseStockListingChallenge;
 		};
-		474C791C2D9E47E100CA2817 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 474C78F92D9E47DF00CA2817 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 474C79002D9E47DF00CA2817;
-			remoteInfo = MoneyBaseStockListingChallenge;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		474C79012D9E47DF00CA2817 /* MoneyBaseStockListingChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyBaseStockListingChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		474C79112D9E47E100CA2817 /* MoneyBaseStockListingChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyBaseStockListingChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		474C791B2D9E47E100CA2817 /* MoneyBaseStockListingChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyBaseStockListingChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -38,11 +30,6 @@
 		474C79142D9E47E100CA2817 /* MoneyBaseStockListingChallengeTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MoneyBaseStockListingChallengeTests;
-			sourceTree = "<group>";
-		};
-		474C791E2D9E47E100CA2817 /* MoneyBaseStockListingChallengeUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MoneyBaseStockListingChallengeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -62,13 +49,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		474C79182D9E47E100CA2817 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,7 +57,6 @@
 			children = (
 				474C79032D9E47DF00CA2817 /* MoneyBaseStockListingChallenge */,
 				474C79142D9E47E100CA2817 /* MoneyBaseStockListingChallengeTests */,
-				474C791E2D9E47E100CA2817 /* MoneyBaseStockListingChallengeUITests */,
 				474C79022D9E47DF00CA2817 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,7 +66,6 @@
 			children = (
 				474C79012D9E47DF00CA2817 /* MoneyBaseStockListingChallenge.app */,
 				474C79112D9E47E100CA2817 /* MoneyBaseStockListingChallengeTests.xctest */,
-				474C791B2D9E47E100CA2817 /* MoneyBaseStockListingChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,29 +118,6 @@
 			productReference = 474C79112D9E47E100CA2817 /* MoneyBaseStockListingChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		474C791A2D9E47E100CA2817 /* MoneyBaseStockListingChallengeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 474C792B2D9E47E100CA2817 /* Build configuration list for PBXNativeTarget "MoneyBaseStockListingChallengeUITests" */;
-			buildPhases = (
-				474C79172D9E47E100CA2817 /* Sources */,
-				474C79182D9E47E100CA2817 /* Frameworks */,
-				474C79192D9E47E100CA2817 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				474C791D2D9E47E100CA2817 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				474C791E2D9E47E100CA2817 /* MoneyBaseStockListingChallengeUITests */,
-			);
-			name = MoneyBaseStockListingChallengeUITests;
-			packageProductDependencies = (
-			);
-			productName = MoneyBaseStockListingChallengeUITests;
-			productReference = 474C791B2D9E47E100CA2817 /* MoneyBaseStockListingChallengeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -177,10 +132,6 @@
 						CreatedOnToolsVersion = 16.2;
 					};
 					474C79102D9E47E100CA2817 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 474C79002D9E47DF00CA2817;
-					};
-					474C791A2D9E47E100CA2817 = {
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 474C79002D9E47DF00CA2817;
 					};
@@ -202,7 +153,6 @@
 			targets = (
 				474C79002D9E47DF00CA2817 /* MoneyBaseStockListingChallenge */,
 				474C79102D9E47E100CA2817 /* MoneyBaseStockListingChallengeTests */,
-				474C791A2D9E47E100CA2817 /* MoneyBaseStockListingChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -216,13 +166,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		474C790F2D9E47E100CA2817 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		474C79192D9E47E100CA2817 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,13 +189,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		474C79172D9E47E100CA2817 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -260,11 +196,6 @@
 			isa = PBXTargetDependency;
 			target = 474C79002D9E47DF00CA2817 /* MoneyBaseStockListingChallenge */;
 			targetProxy = 474C79122D9E47E100CA2817 /* PBXContainerItemProxy */;
-		};
-		474C791D2D9E47E100CA2817 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 474C79002D9E47DF00CA2817 /* MoneyBaseStockListingChallenge */;
-			targetProxy = 474C791C2D9E47E100CA2817 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -486,40 +417,6 @@
 			};
 			name = Release;
 		};
-		474C792C2D9E47E100CA2817 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S7Z72M2S32;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tauqeerhome.MoneyBaseStockListingChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MoneyBaseStockListingChallenge;
-			};
-			name = Debug;
-		};
-		474C792D2D9E47E100CA2817 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S7Z72M2S32;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tauqeerhome.MoneyBaseStockListingChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MoneyBaseStockListingChallenge;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -546,15 +443,6 @@
 			buildConfigurations = (
 				474C79292D9E47E100CA2817 /* Debug */,
 				474C792A2D9E47E100CA2817 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		474C792B2D9E47E100CA2817 /* Build configuration list for PBXNativeTarget "MoneyBaseStockListingChallengeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				474C792C2D9E47E100CA2817 /* Debug */,
-				474C792D2D9E47E100CA2817 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

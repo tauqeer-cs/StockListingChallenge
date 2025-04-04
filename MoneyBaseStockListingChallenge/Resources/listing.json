@@ -1,0 +1,95 @@
+{
+  "marketSummaryAndSparkResponse": {
+    "result": [
+      {
+        "exchangeTimezoneName": "America/New_York",
+        "fullExchangeName": "SNP",
+        "symbol": "^GSPC",
+        "gmtOffSetMilliseconds": -18000000,
+        "exchangeDataDelayedBy": 0,
+        "firstTradeDateMilliseconds": -1325583000000,
+        "language": "en-US",
+        "regularMarketTime": {
+          "raw": 1645027268,
+          "fmt": "11:01AM EST"
+        },
+        "exchangeTimezoneShortName": "EST",
+        "quoteType": "INDEX",
+        "marketState": "REGULAR",
+        "market": "us_market",
+        "spark": {
+          "previousClose": 4471.07,
+          "chartPreviousClose": 4471.07,
+          "symbol": "^GSPC",
+          "timestamp": [
+            1645021800,
+            1645022100
+          ],
+          "close": [
+            4455.68,
+            4452.96
+          ],
+          "dataGranularity": 300,
+          "end": 1645045200,
+          "start": 1645021800
+        },
+        "priceHint": 2,
+        "tradeable": false,
+        "sourceInterval": 15,
+        "exchange": "SNP",
+        "shortName": "S&P 500",
+        "region": "US",
+        "triggerable": false,
+        "regularMarketPreviousClose": {
+          "raw": 4471.07,
+          "fmt": "4,471.07"
+        }
+      },
+      {
+        "exchangeTimezoneName": "America/New_York",
+        "fullExchangeName": "DJI",
+        "symbol": "^DJI",
+        "gmtOffSetMilliseconds": -18000000,
+        "exchangeDataDelayedBy": 0,
+        "firstTradeDateMilliseconds": 694362600000,
+        "language": "en-US",
+        "regularMarketTime": {
+          "raw": 1645027268,
+          "fmt": "11:01AM EST"
+        },
+        "exchangeTimezoneShortName": "EST",
+        "quoteType": "INDEX",
+        "marketState": "REGULAR",
+        "market": "us_market",
+        "spark": {
+          "previousClose": 34988.84,
+          "chartPreviousClose": 34988.84,
+          "symbol": "^DJI",
+          "timestamp": [
+            1645021800,
+            1645022100
+          ],
+          "close": [
+            34904.81,
+            34920.92
+          ],
+          "dataGranularity": 300,
+          "end": 1645045200,
+          "start": 1645021800
+        },
+        "priceHint": 2,
+        "tradeable": false,
+        "sourceInterval": 120,
+        "exchange": "DJI",
+        "shortName": "Dow 30",
+        "region": "US",
+        "triggerable": false,
+        "regularMarketPreviousClose": {
+          "raw": 34988.84,
+          "fmt": "34,988.84"
+        }
+      }
+    ],
+    "error": null
+  }
+}
