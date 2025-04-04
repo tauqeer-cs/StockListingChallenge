@@ -14,15 +14,17 @@ struct StockListingView: View {
     var body: some View {
         NavigationView {
             Group {
+                LoadingShimmerView()
+                /*
                 if viewModel.isLoading && viewModel.stocks.isEmpty {
-                    LoadingView()
+                    LoadingShimmerView()
                 } else if let errorMessage = viewModel.errorMessage,viewModel.stocks.isEmpty {
                     ErrorView(message: errorMessage) {
                         viewModel.loadMarketSummary()
                     }
                 } else {
                     stockList
-                }
+                }*/
             }
         }
         .navigationTitle("Top Stocks")
@@ -97,7 +99,44 @@ struct LoadingView: View {
     }
 }
 
-
+struct LoadingShimmerView : View {
+    var body: some View {
+        VStack(alignment: .leading,spacing: 0) {
+            ForEach(0..<5, id: \.self) { _ in
+                HStack {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Long Company Name")
+                            .font(.headline)
+                            .shimmer(isActive: true)
+                        
+                        Text("SYM $54")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                            .shimmer(isActive: true)
+                    }
+                    
+                    Spacer()
+                    
+                    VStack(alignment: .trailing, spacing: 4) {
+                        Text("5416423.00")
+                            .font(.headline)
+                            .shimmer(isActive: true)
+                        
+                        Text("16123.75")
+                                .font(.subheadline)
+                                .foregroundColor(.red)
+                                .shimmer(isActive: true)
+                        
+                    }
+                }
+                .padding(.horizontal)
+                .padding(.vertical , 8)
+                Divider()
+            }
+            Spacer()
+        }
+    }
+}
 struct ErrorView: View {
     let message: String
     let retryAction: () -> Void
