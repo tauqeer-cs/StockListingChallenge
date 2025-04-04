@@ -72,8 +72,8 @@ class StockListViewModel : ObservableObject {
     }
     
     private func setupRefreshTimer() {
-        ///TODO : Change this interval to 8 later
-        refreshTimer = Timer.scheduledTimer(withTimeInterval: 800, repeats: true) { [weak self] _ in
+
+        refreshTimer = Timer.scheduledTimer(withTimeInterval: 8, repeats: true) { [weak self] _ in
             self?.loadMarketSummary()
         }
     }

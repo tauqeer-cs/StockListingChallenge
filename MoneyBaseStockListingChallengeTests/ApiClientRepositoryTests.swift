@@ -72,7 +72,6 @@ class ApiClientRepositoryTests: XCTestCase {
             .setFailureType(to: URLError.self)
             .eraseToAnyPublisher()
         
-        // Override URLSession for testing
         let apiClient = TestableApiClientRepository(mockSession: mockURLSession)
         let expectation = self.expectation(description: "Should return decoded data")
         var receivedResponse: MockResponse?
@@ -116,7 +115,6 @@ class ApiClientRepositoryTests: XCTestCase {
             .setFailureType(to: URLError.self)
             .eraseToAnyPublisher()
         
-        // Override URLSession for testing
         let apiClient = TestableApiClientRepository(mockSession: mockURLSession)
         let expectation = self.expectation(description: "Should return decodingError")
         var receivedError: APIError?

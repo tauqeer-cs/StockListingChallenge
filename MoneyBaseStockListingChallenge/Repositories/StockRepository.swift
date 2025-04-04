@@ -36,7 +36,7 @@ class MarketStockRepository : StockRepository {
     }
 }
 
-
+///This I had to create to best the detail api with static json. 
 class StaticStockRepository: StockRepository {
     func fetchStocks(region: String) -> AnyPublisher<MarketSummaryResponse, APIError> {
         guard let url = Bundle.main.url(forResource: "listing", withExtension: "json"),
