@@ -36,11 +36,11 @@ struct StockDetailView: View {
                     }
                     Divider()
                     HStack {
-                        Text("Exchange Timezone")
+                        Text("Price Hit")
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                         Spacer()
-                        Text(summaryObject.exchangeTimezoneName)
+                        Text("\(summaryObject.priceHint)")
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                     }

@@ -1,0 +1,85 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ (%2$@)"
+          }
+        }
+      }
+    },
+    "%@ (%@%%)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ (%2$@%%)"
+          }
+        }
+      }
+    },
+    "%lld" : {
+
+    },
+    "16123.75" : {
+
+    },
+    "5416423.00" : {
+
+    },
+    "Business Summary" : {
+
+    },
+    "Company Info" : {
+
+    },
+    "Exchange Timezone" : {
+
+    },
+    "exchangeTimezone" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exchange Timezone"
+          }
+        }
+      }
+    },
+    "Key Statistics" : {
+
+    },
+    "Long Company Name" : {
+
+    },
+    "Market State" : {
+
+    },
+    "Price Hit" : {
+
+    },
+    "Retry" : {
+
+    },
+    "Search" : {
+
+    },
+    "SYM $54" : {
+
+    },
+    "Symbol: %@" : {
+
+    },
+    "Top Stocks" : {
+
+    },
+    "Visit Website" : {
+
+    }
+  },
+  "version" : "1.0"
+}

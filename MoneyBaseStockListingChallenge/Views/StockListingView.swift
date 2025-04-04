@@ -14,8 +14,7 @@ struct StockListingView: View {
     var body: some View {
         NavigationView {
             Group {
-                LoadingShimmerView()
-                /*
+                
                 if viewModel.isLoading && viewModel.stocks.isEmpty {
                     LoadingShimmerView()
                 } else if let errorMessage = viewModel.errorMessage,viewModel.stocks.isEmpty {
@@ -24,11 +23,13 @@ struct StockListingView: View {
                     }
                 } else {
                     stockList
-                }*/
+                }
             }
+            .navigationTitle("Top Stocks")
+
         }
-        .navigationTitle("Top Stocks")
         .searchable(text: $viewModel.searchText , prompt: "Search")
+
     }
     
     private var stockList: some View {
@@ -85,24 +86,10 @@ struct StockRowView: View {
     StockListingView()
 }
 
-struct LoadingView: View {
-    var body: some View {
-        VStack {
-            Spacer()
-            ProgressView()
-                .scaleEffect(1.5)
-            Text("Loading market data...")
-                .font(.headline)
-                .padding()
-            Spacer()
-        }
-    }
-}
-
 struct LoadingShimmerView : View {
     var body: some View {
-        VStack(alignment: .leading,spacing: 0) {
-            ForEach(0..<5, id: \.self) { _ in
+        List {
+            ForEach(0..<8, id: \.self) { _ in
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("Long Company Name")
@@ -130,11 +117,9 @@ struct LoadingShimmerView : View {
                     }
                 }
                 .padding(.horizontal)
-                .padding(.vertical , 8)
-                Divider()
             }
-            Spacer()
         }
+        .listStyle(PlainListStyle())
     }
 }
 struct ErrorView: View {
